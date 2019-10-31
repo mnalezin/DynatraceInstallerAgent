@@ -1,0 +1,15 @@
+{
+    "typeName": "Dynatrace::Installer::Agent",
+    "language": "java",
+    "runtime": "java8",
+    "entrypoint": "com.dynatrace.installer.agent.HandlerWrapper::handleRequest",
+    "testEntrypoint": "com.dynatrace.installer.agent.HandlerWrapper::testEntrypoint",
+    "settings": {
+        "namespace": [
+            "com",
+            "dynatrace",
+            "installer",
+            "agent"
+        ]
+    }
+}

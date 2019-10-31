@@ -1,0 +1,11 @@
+source /c/Users/wojciech.grajewski/Downloads/uluru/env/Scripts/activate
+
+cfn-cli generate & mvn package & cfn-cli submit --region us-west-2 -v
+
+aws cloudformation describe-type-registration --region us-west-2 --registration-token 1565db62-5f95-4034-8489-57927269a792
+aws cloudformation list-type-versions --region us-west-2 --type RESOURCE --type-name Dynatrace::Installer::Agent
+aws cloudformation describe-type --region us-west-2 --type RESOURCE --type-name Dynatrace::Installer::Agent
+aws cloudformation set-type-default-version --region us-west-2 --type RESOURCE --type-name Dynatrace::Installer::Agent --version-id 00000003
+aws cloudformation deregister-type --region us-west-2 --type RESOURCE --type-name Dynatrace::Installer::Agent --version-id 00000009
+
+aws ec2 describe-instance-attribute --region us-west-2 --attribute userData --output text --query "UserData.Value" --instance-id i-0428f24886a83de4e

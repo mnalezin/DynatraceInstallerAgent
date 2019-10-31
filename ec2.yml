@@ -1,0 +1,17 @@
+Resources:
+  AgentInstaller:
+    Type: Dynatrace::Installer::Agent
+    Properties:
+      Hostname: dwz940.managed-dev.dynalabs.io
+      TenantId: 64151211-f3fc-4905-8296-15d933018e21
+      ApiToken: LXOAFtFQQQqch8wxQpL6m
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-0a73079d21ff61c58
+      KeyName: wojciech-grajewski
+      ImageId: ami-04b762b4289fba92b
+      UserData: !GetAtt AgentInstaller.ScriptString

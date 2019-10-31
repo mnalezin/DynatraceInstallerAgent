@@ -1,0 +1,60 @@
+{
+    "typeName": "Dynatrace::Installer::Agent",
+    "description": "Resource providing Base-64 encoded ScriptString that installs Dynatrace OneAgent when used as EC2 UserData.",
+    "properties": {
+        "Hostname": {
+            "description": "Customer's Dynatrace deployment hostname, e.g. dwz940.managed-dev.dynalabs.io",
+            "type": "string"
+        },
+        "TenantId": {
+            "description": "ID of the tenant for which OneAgent should be installed, e.g. 64151211-f3fc-4905-8296-15d933018e21",
+            "type": "string"
+        },
+        "ApiToken": {
+            "description": "Customer's Dynatrace PaaS token.",
+            "type": "string"
+        },
+        "ScriptString": {
+            "description": "The generated Base-64 encoded script for installing OneAgent.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "Hostname",
+        "TenantId",
+        "ApiToken"
+    ],
+    "primaryIdentifier": [
+        "/properties/ScriptString"
+    ],
+    "readOnlyProperties": [
+        "/properties/ScriptString"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": [
+                "initech:CreateReport"
+            ]
+        },
+        "read": {
+            "permissions": [
+                "initech:DescribeReport"
+            ]
+        },
+        "update": {
+            "permissions": [
+                "initech:UpdateReport"
+            ]
+        },
+        "delete": {
+            "permissions": [
+                "initech:DeleteReport"
+            ]
+        },
+        "list": {
+            "permissions": [
+                "initech:ListReports"
+            ]
+        }
+    }
+}
