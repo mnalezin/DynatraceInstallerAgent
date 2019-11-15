@@ -1,17 +1,10 @@
 # Dynatrace::Installer::Agent
 
-Congratulations on starting development! Next steps:
+Dynatrace Installer resource currently supports OneAgent installation for Linux systems, but it's fully extensible. 
+You can build the resource from the source code using Java environment (cfn-cli tool/RPDK, Maven, JDK, git CLI, etc) with the following steps:
 
-1. Write the JSON schema describing your resource, `dynatrace-installer-agent.json`
-2. The RPDK will automatically generate the correct resource model from the
-   schema whenever the project is built via Maven. You can also do this manually
-   with the following command: `cfn-cli generate`
-3. Implement your resource handlers
+Clone git repository - ```git clone https://github.com/mnalezin/DynatraceInstallerAgent```
+Create package with Maven - ```mvn package```
+Submit the resource - ```cfn-cli submit```
 
-
-Please don't modify files under `target/generated-sources/rpdk`, as they will be
-automatically overwritten.
-
-The code use [Lombok](https://projectlombok.org/), and [you may have to install
-IDE integrations](https://projectlombok.org/) to enable auto-complete for
-Lombok-annotated classes.
+Feel free to experiment with the new resource provider and contact us with questions and comments.
