@@ -9,3 +9,5 @@ You can build the resource from the source code using Java environment (cfn-cli 
 1. Submit the resource - ```cfn-cli submit```
 
 Feel free to experiment with the new resource provider and contact us with questions and comments.
+
+Read more: https://www.dynatrace.com/news/blog/aws-cloudformation-registry/
