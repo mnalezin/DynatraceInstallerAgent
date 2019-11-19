@@ -24,10 +24,10 @@
         "TenantId",
         "ApiToken"
     ],
-    "primaryIdentifier": [
+    "readOnlyProperties": [
         "/properties/ScriptString"
     ],
-    "readOnlyProperties": [
+    "primaryIdentifier": [
         "/properties/ScriptString"
     ],
     "handlers": {
