@@ -1,6 +1,6 @@
 # Dynatrace::Installer::Agent
 
-Dynatrace Installer resource currently supports OneAgent installation for Linux systems, but it's fully extensible. 
+AWS Dynatrace OneAgent Installer resource currently supports OneAgent installation for Linux systems, but it's fully extensible. 
 You can build the resource from the source code using Java environment (cfn-cli tool/RPDK, Maven, JDK, git CLI, etc) with the following steps:
 
 1. Clone git repository - ```git clone https://github.com/mnalezin/DynatraceInstallerAgent```
