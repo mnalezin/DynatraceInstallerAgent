@@ -19,15 +19,16 @@
             "type": "string"
         }
     },
+    "additionalProperties": false,
     "required": [
         "Hostname",
         "TenantId",
         "ApiToken"
     ],
-    "primaryIdentifier": [
+    "readOnlyProperties": [
         "/properties/ScriptString"
     ],
-    "readOnlyProperties": [
+    "primaryIdentifier": [
         "/properties/ScriptString"
     ],
     "handlers": {
