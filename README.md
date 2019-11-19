@@ -6,7 +6,7 @@ You can build the resource from the source code using Java environment (cfn-cli 
 1. Clone git repository - ```git clone https://github.com/mnalezin/DynatraceInstallerAgent```
 1. cd DynatraceInstallerAgent/
 1. Create package with Maven - ```mvn package```
-1. Submit the resource - ```cfn-cli submit```
+1. Submit the resource - ```cfn submit```
 
 Feel free to experiment with the new resource provider and contact us with questions and comments.
 
